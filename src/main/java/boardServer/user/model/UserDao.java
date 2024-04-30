@@ -1,4 +1,4 @@
-package boardServer.user;
+package boardServer.user.model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,7 +9,6 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.mysql.cj.protocol.Resultset;
 
 public class UserDao {
 
