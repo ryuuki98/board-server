@@ -1,15 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri ="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" href="/resources/style/form.css">
 </head>
-<jsp:include page="/header"></jsp:include>
+<c:import url="/header"></c:import>
 <script src="/resources/script/validation-join.js"></script>
 <body>
+
+<c:if test="${empty user }">
+<c:redirect url="/login"/>
+</c:if>
+
 	<section id="root">
-		<h2>회원가입</h2>
-		<form method="POST" action="/updateUserFormPro">
+		<h2>정보수정</h2>
+		<form method="POST" action="/updateUserFormAction">
 			<div>
 				<input type="text" id="id" name="id" placeholder="아이디" value="${user.id}" disabled="disabled">
 				 <script>
@@ -82,5 +88,5 @@
 		</form>
 	</section>
 </body>
-<jsp:include page="/footer"></jsp:include>
+<c:import url="/footer"></c:import>
 </html>
