@@ -3,12 +3,60 @@
 	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
 	id="WebApp_ID" version="4.0">
-	
+
 	<display-name>board-server-guide</display-name>
-	
+
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
+
+	<!--Servlet mapping -->
+	<servlet>
+		<servlet-name>deleteUserAction</servlet-name>
+		<servlet-class>boardServer.user.controller.deleteUserFormAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>deleteUserAction</servlet-name>
+		<url-pattern>/deleteUser</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>joinFormAction</servlet-name>
+		<servlet-class>boardServer.user.controller.JoinFormAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>joinFormAction</servlet-name>
+		<url-pattern>/joinFormAction</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>loginFormAction</servlet-name>
+		<servlet-class>boardServer.user.controller.LoginFormAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>loginFormAction</servlet-name>
+		<url-pattern>/loginFormAction</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>logoutAction</servlet-name>
+		<servlet-class>boardServer.user.controller.LogoutAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>logoutAction</servlet-name>
+		<url-pattern>/logoutAction</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>updateUserFormAction</servlet-name>
+		<servlet-class>boardServer.user.controller.UpdateUserFormAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>updateUserFormAction</servlet-name>
+		<url-pattern>/updateUserFormAction</url-pattern>
+	</servlet-mapping>
+	
+
 
 	<!-- JSP files mapping -->
 	<servlet>
@@ -39,15 +87,6 @@
 	</servlet-mapping>
 
 	<servlet>
-		<servlet-name>joinFormPro</servlet-name>
-		<jsp-file>/views/user/joinFormPro.jsp</jsp-file>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>joinFormPro</servlet-name>
-		<url-pattern>/joinPro</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
 		<servlet-name>myPage</servlet-name>
 		<jsp-file>/views/user/mypage.jsp</jsp-file>
 	</servlet>
@@ -55,7 +94,7 @@
 		<servlet-name>myPage</servlet-name>
 		<url-pattern>/mypage</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>login</servlet-name>
 		<jsp-file>/views/user/loginForm.jsp</jsp-file>
@@ -64,66 +103,26 @@
 		<servlet-name>login</servlet-name>
 		<url-pattern>/login</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
-		<servlet-name>loginPro</servlet-name>
-		<jsp-file>/views/user/loginFormPro.jsp</jsp-file>
+		<servlet-name>updateUserForm</servlet-name>
+		<jsp-file>/views/user/updateUserForm.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>updateUserForm</servlet-name>
+		<url-pattern>/updateUserForm</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>deleteUserForm</servlet-name>
+		<jsp-file>/views/user/deleteUserForm.jsp</jsp-file>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>loginPro</servlet-name>
-		<url-pattern>/loginPro</url-pattern>
+		<servlet-name>deleteUserForm</servlet-name>
+		<url-pattern>/deleteUserForm</url-pattern>
 	</servlet-mapping>
-	
-	<servlet>
-	<servlet-name>updateUserForm</servlet-name>
-	<jsp-file>/views/user/updateUserForm.jsp</jsp-file>
-	</servlet>
-	
-	<servlet-mapping>
-	<servlet-name>updateUserForm</servlet-name>
-	<url-pattern>/updateUserForm</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
-	<servlet-name>updateUserFormPro</servlet-name>
-	<jsp-file>/views/user/updateUserFormPro.jsp</jsp-file>
-	</servlet>
-	<servlet-mapping>
-	<servlet-name>updateUserFormPro</servlet-name>
-	<url-pattern>/updateUserFormPro</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
-	<servlet-name>deleteUserForm</servlet-name>
-	<jsp-file>/views/user/deleteUserForm.jsp</jsp-file>
-	</servlet>
-	<servlet-mapping>
-	<servlet-name>deleteUserForm</servlet-name>
-	<url-pattern>/deleteUserForm</url-pattern>
-	</servlet-mapping>
-	
-	
-	<servlet>
-	<servlet-name>deleteUserFormPro</servlet-name>
-	<jsp-file>/views/user/deleteUserFormPro.jsp</jsp-file>
-	</servlet>
-	<servlet-mapping>
-	<servlet-name>deleteUserFormPro</servlet-name>
-	<url-pattern>/deleteUserFormPro</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
-	<servlet-name>logoutPro</servlet-name>
-	<jsp-file>/views/user/logoutPro.jsp</jsp-file>
-	</servlet>
-	<servlet-mapping>
-	<servlet-name>logoutPro</servlet-name>
-	<url-pattern>/logoutPro</url-pattern>
-	</servlet-mapping>
-	
-	
-	
-	
 
 
 </web-app>
